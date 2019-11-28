@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Login">
+
+    <Button
+        android:id="@+id/btnLoginNovo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="novo" />
+
+    <Button
+        android:id="@+id/btnLoginLogar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="logar" />
+
+    <EditText
+        android:id="@+id/editLoginEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        />
+
+    <EditText
+        android:id="@+id/editLoginSenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+         />
+
+    <TextView
+        android:id="@+id/txtResetSenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="reset" />
+
+</LinearLayout>
