@@ -20,6 +20,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.common.api.ResolvableApiException;
@@ -47,7 +48,7 @@ import java.util.UUID;
 
 public class Gps extends AppCompatActivity {
 
-
+    private Button btnLogout2;
 
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
@@ -91,11 +92,25 @@ public class Gps extends AppCompatActivity {
                 configurarServico();
             }
         });
+inicializaBotao();
 inicializarFirebase();
 eventoDatabase();
-
+        eventoCliks();
 
     }
+
+    private void eventoCliks() {
+
+        btnLogout2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Conexao.LogOut();
+                finish();
+            }
+        });
+    }
+
+
 int test = 5;
 
     private void eventoDatabase() {
@@ -131,6 +146,10 @@ int test = 5;
 
     }
 
+    public void inicializaBotao() {
+
+        btnLogout2 = (Button) findViewById(R.id.btnLogout2);
+    }
 
 
 
