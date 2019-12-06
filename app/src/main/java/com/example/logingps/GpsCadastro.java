@@ -45,7 +45,7 @@ public class GpsCadastro {
 
     @Override
     public String toString() {
-        return "Latitude='" + cordenadas + '\'' +
+        return "Latitude=" + cordenadas + '\'' +
                 "                                 Longitude='" + cordendas2 + '\'' +
                 " Datahora='" + Datahora + '\'';
     }

@@ -20,6 +20,12 @@
         android:layout_height="wrap_content"
         android:text="Sair" />
 
+    <Button
+        android:id="@+id/btnRC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="recuperar" />
+
     <ListView
         android:id="@+id/ListV_dados"
         android:layout_width="match_parent"

@@ -8,6 +8,7 @@ import androidx.core.app.ActivityCompat;
 import android.Manifest;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.content.IntentSender;
 import android.content.pm.PackageManager;
 import android.location.Location;
@@ -49,6 +50,7 @@ import java.util.UUID;
 public class Gps extends AppCompatActivity {
 
     private Button btnLogout2;
+    private Button btnRc;
 
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
@@ -96,7 +98,7 @@ inicializaBotao();
 inicializarFirebase();
 eventoDatabase();
         eventoCliks();
-
+        btnRC();
     }
 
     private void eventoCliks() {
@@ -108,6 +110,17 @@ eventoDatabase();
                 finish();
             }
         });
+    }
+
+    private void btnRC(){
+        btnRc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Gps.this,Pesquisa.class);
+                startActivity(i);
+            }
+        });
+
     }
 
 
@@ -149,6 +162,7 @@ int test = 5;
     public void inicializaBotao() {
 
         btnLogout2 = (Button) findViewById(R.id.btnLogout2);
+        btnRc = (Button) findViewById(R.id.btnRC);
     }
 
 
